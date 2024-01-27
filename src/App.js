@@ -4,9 +4,8 @@ import "./App.css";
 import MovieCard from "./components/MovieCard";
 import MovieDetail from "./components/MovieDetail";
 import Search from "./components/Search";
-import { MutatingDots } from "react-loader-spinner";
 
-export const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
+export const API_URL = "https://www.omdbapi.com?apikey=b6003d8a";
 
 const App = () => {
   const [movies, setMovies] = React.useState([]);
@@ -36,17 +35,7 @@ const HomePage = ({movies}) => {
         </div>
       ) : (
         <div className="empty">
-          <MutatingDots
-            visible={true}
-            height="100"
-            width="100"
-            color="#4fa94d"
-            secondaryColor="#4fa94d"
-            radius="12.5"
-            ariaLabel="mutating-dots-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-          />;
+          <h2>No movies found</h2>
         </div>
       )}
     </>
